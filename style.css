@@ -92,7 +92,7 @@ body {
 .project-card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 32px;
 }
 
 .project-title {
@@ -109,6 +109,16 @@ body {
   border: 1px solid #e3e3e3; /* light grey border */
   border-radius: 8px;
   box-shadow: none; /* removed previous shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover .thumbnail {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.project-card:hover .project-title {
+  text-decoration: underline;
 }
 
 /* Responsive design */
@@ -118,17 +128,17 @@ body {
   }
 
   .projects-list {
-    gap: 48px;
+    gap: 80px;
   }
 }
 
 @media (min-width: 1200px) {
   .page-container {
-    max-width: 1200px;
-    padding: 30px 32px;
+    max-width: 1520px;
+    padding: 30px 160px;
   }
 
   .projects-list {
-    gap: 48px;
+    gap: 80px;
   }
 }
