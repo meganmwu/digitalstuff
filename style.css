@@ -53,7 +53,7 @@ body {
 
 /* Page container: margins 50% smaller */
 .page-container {
-  max-width: 900px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 30px 20px; /* reduced from 60px */
 }
@@ -111,4 +111,20 @@ body {
   box-shadow: none; /* removed previous shadow */
 }
 
-/*
+/* Responsive design */
+@media (min-width: 1200px) {
+  .page-container {
+    max-width: 1200px;
+    padding: 30px 32px;
+  }
+
+  .projects-list {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 0 16px;
+  }
+
+  .project-card {
+    min-width: 400px;
+  }
+}
