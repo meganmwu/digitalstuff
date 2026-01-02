@@ -4,21 +4,451 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project One — Portfolio</title>
+  <link rel="stylesheet" href="tokens.css" />
+  <link rel="stylesheet" href="layout.css" />
+  <link rel="stylesheet" href="typography.css" />
+  <link rel="stylesheet" href="utilities.css" />
+  <link rel="stylesheet" href="components.css" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <div class="page-container">
-    <header class="site-header">
-      <h1 class="title-1">Project One</h1>
-      <p class="subtitle">A brief description of the project</p>
-    </header>
+<body class="page-background-dark">
+  <div id="password-screen" class="password-screen">
+    <div class="password-container">
+      <h2 class="subtitle">Enter Password</h2>
+      <input type="password" id="password-input" class="password-input" placeholder="Password" />
+      <button id="password-submit" class="password-submit">Submit</button>
+      <p id="password-error" class="password-error"></p>
+    </div>
+  </div>
 
-    <main class="projects-section">
-      <h2 class="title-2">Project Details</h2>
-
-      <p class="body-1">This is a placeholder for project content.</p>
+  <nav class="project-nav" aria-label="Project navigation">
+    <a class="project-nav-link body-2" href="projects.html"><svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-arrow">
+<path d="M11.5 5.5C11.7761 5.5 12 5.27614 12 5C12 4.72386 11.7761 4.5 11.5 4.5L1.80298 4.5L5.83448 0.871651C6.03974 0.686921 6.05638 0.370777 5.87165 0.165522C5.68692 -0.039733 5.37077 -0.0563723 5.16552 0.128357L0.165518 4.62835C0.0601606 4.72317 6.19579e-09 4.85826 0 5C-6.19579e-09 5.14174 0.0601606 5.27683 0.165518 5.37165L5.16552 9.87164C5.37077 10.0564 5.68692 10.0397 5.87165 9.83448C6.05638 9.62922 6.03974 9.31308 5.83448 9.12835L1.80298 5.5L11.5 5.5Z" fill="white" fill-opacity="0.75"/>
+</svg>Back</a>
+    <a class="project-nav-link body-2" href="#overview">Overview</a>
+    <a class="project-nav-link body-2" href="#problem">Problem</a>
+    <a class="project-nav-link body-2" href="#goal">Goal</a>
+    <a class="project-nav-link body-2" href="#component-implementation">1 / Component Implementation</a>
+    <a class="project-nav-link body-2" href="#system-guidance">2 / System guidance</a>
+    <a class="project-nav-link body-2" href="#legacy-onboarding">3 / Legacy onboarding</a>
+    <a class="project-nav-link body-2" href="#semantic-tokens">4 / Semantic tokens</a>
+    <a class="project-nav-link body-2" href="#outcomes">Outcomes</a>
+  </nav>
+  <div class="work-projects-responsive">
+    <main class="project-content">
+      <section id="overview" class="overview-section">
+        <div class="overview-grid">
+          <div class="overview-column primary">
+            <div class="primary-content-section">
+              <h1 class="title-1" style="color: var(--foreground-content-primary-on-dark); margin-bottom: 36px;">Bing Design System: modernizing, scaling, and future-proofing visual evolution</h1>
+              <p class="body-1-light">I was part of a small but mighty design team that worked on rebuilding the Bing Design System, which defines the visual guidelines and coherence of a search engine with ~100 million daily active users.</p>
+            </div>
+            <div class="primary-content-section">
+              <div class="image-grid">
+                <div class="image-grid-row first-row">
+                  <div class="image-and-caption-container">
+                    <img src="Assets/Images/Project%201/project%201%20thumbnail.gif" alt="Project 1 thumbnail" class="image-placeholder card-corner" />
+                    <p class="image-caption body-2-light">Semantic tokens enable scaling of future changes to the design system.</p>
+                  </div>
+                  <div class="image-and-caption-container">
+                    <img src="Assets/Images/Project%201/project-1-image-2.png" alt="Project 1 image 2" class="image-placeholder card-corner" />
+                    <p class="image-caption body-2-light">Component documentation and building.</p>
+                  </div>
+                </div>
+                <div class="image-grid-row second-row">
+                  <div class="image-and-caption-container">
+                    <img src="Assets/Images/Project%201/project-1-image-3.png" alt="Project 1 image 3" class="image-placeholder card-corner" />
+                    <p class="image-caption body-2-light">Simplified hierarchy principles.</p>
+                  </div>
+                  <div class="image-and-caption-container">
+                    <img src="Assets/Images/Project%201/project-1-image-4.png" alt="Project 1 image 4" class="image-placeholder card-corner" />
+                    <p class="image-caption body-2-light">Enabling teams to build modular search answers.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="overview-column secondary">
+            <div class="about-project">
+              <h3 class="body-1-strong">Project type</h3>
+              <p class="body-2-light">Design system</p>
+            </div>
+            <div class="about-project">
+              <h3 class="body-1-strong">Skills</h3>
+              <p class="body-2-light">Design systems, component architecture, design tokens</p>
+            </div>
+            <div class="about-project">
+              <h3 class="body-1-strong">Team</h3>
+              <p class="body-2-light">1 product manager, 8-10 engineers, 4 designers</p>
+            </div>
+            <div class="about-project">
+              <h3 class="body-1-strong">Role</h3>
+              <p class="body-2-light">I was responsible for:
+<br>• Improvement of the Bing Human Interface Guidelines
+<br>• Intake of new patterns and component needs from designers across Bing
+<br>• Creation of detailed, dev-ready specs for common controls
+<br>• Providing coherence input and approval for designers across 35+ answer segments</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="divider">
+      <section id="problem" class="case-study-section">
+        <h2 class="case-study-title title-1">Problem</h2>
+        <p class="case-study-text">Bing.com is a search engine with 100 million daily active users, 900 million daily search queries, and $12.2 billion in annual advertising revenue. </p>
+        <p class="case-study-text">As of mid 2024, it also had a <span class="highlighted-text">design system that was visually outdated and lacked actual, coded components</span>. That meant that search engine results used across 35+ search engine search segments used custom builds for even basic UI elements like buttons, input fields, and colors.</p>
+        <p class="case-study-text">On top of this, the <span class="highlighted-text">latest design system guidance</span>, which was meant to help teams onboard to a modernized visual system, was <span class="highlighted-text">confusing and outdated</span>. </p>
+        <p class="case-study-text">Lastly, while there was a medium-term goal of onboarding all search engine answers to the latest visual system, Bing, as part of Microsoft AI, needed to <span class="highlighted-text">eventually align with a newer Microsoft AI design system</span> that is used for a host of products under Microsoft AI, like Copilot. </p>
+        <p class="case-study-text">Like many other products with cross-product dependencies and a need to maintain its revenue, Bing and its design system was a complex project with many moving parts.</p>
+        <div class="problem-image-container">
+          <img src="Assets/Images/Project%201/design-system-before.gif" alt="Design system before" class="problem-image card-corner" />
+          <p class="image-caption body-2-light">Design system guidelines were complex and disorganized, making it difficult to understand how to design in Bing.</p>
+        </div>
+      </section>
+      <hr class="divider">
+      <section id="goal" class="case-study-section">
+        <h2 class="case-study-title title-1">Goal</h2>
+        <p class="case-study-text">Update all of Bing with a new, modernized visual design system. This consisted of a few major steps.</p>
+        <div class="goal-item">
+          <span class="goal-number body-1-light">1 /</span>
+          <p class="case-study-text">Bring actual design components into code.</p>
+        </div>
+        <div class="goal-item">
+          <span class="goal-number body-1-light">2 /</span>
+          <p class="case-study-text">Meanwhile, create a comprehensive Bing Design System guidance so that designers and engineers across 35+ search segments understand the new design principles and how to onboard accordingly.</p>
+        </div>
+        <div class="goal-item">
+          <span class="goal-number body-1-light">3 /</span>
+          <p class="case-study-text">Help 35+ search segments onboard legacy answers to the updated design system, and enforce design coherence via reviews and iterations with legal teams.</p>
+        </div>
+        <div class="goal-item">
+          <span class="goal-number body-1-light">4 /</span>
+          <p class="case-study-text">Create and onboard all designers and engineers onto comprehensive semantic token system, as a strategic stepping stone for visual alignment with the rest of Microsoft AI.</p>
+        </div>
+      </section>
+      <hr class="divider">
+      <section id="component-implementation" class="case-study-section">
+        <h2 class="case-study-title title-1">1 / Bring actual design components into code.</h2>
+        <p class="case-study-text">One of the most surprising things about the Bing Design System was that prior to mid 2024, due to lack of past investment, reusable UI controls were never implemented in Bing. Designers could drag and drop some reusable components into designs, but when it came to building search engine answers, <span class="highlighted-text">developers built everything from scratch, leading to a very inefficient, unscalable process</span>.</p>
+        <p class="case-study-text"><span class="highlighted-text">I owned the end-to-end process of preparing UI components for engineering implementation</span> - across both existing design components and net-new patterns requested by partner teams.</p>
+        <div class="carousel-container">
+          <div class="component-carousel" id="componentCarousel">
+            <div class="carousel-item-with-caption">
+              <img src="Assets/Images/Project%201/carousel-1-1.png" alt="Carousel item 1" class="component-carousel-item" />
+              <p class="image-caption body-2-light">I ensured that developers built components atomically by structuring the design guidance accordingly.</p>
+            </div>
+            <div class="carousel-item-with-caption">
+              <img src="Assets/Images/Project%201/carousel-1-2.gif" alt="Carousel item 2" class="component-carousel-item" />
+              <p class="image-caption body-2-light">I provided guidance for properties, states, and behavior for every atom, molecule, and organism that formed a component.</p>
+            </div>
+            <div class="carousel-item-with-caption">
+              <img src="Assets/Images/Project%201/carousel-1-3.png" alt="Carousel item 3" class="component-carousel-item" />
+              <p class="image-caption body-2-light">Some components required detailed interactivity guidance, including keyboard guidance to ensure accessibility.</p>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-button carousel-prev" aria-label="Previous slide">
+              <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 1L1 6L9 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="carousel-dots" id="carouselDots">
+              <button class="carousel-dot active" data-index="0" aria-label="Go to slide 1"></button>
+              <button class="carousel-dot" data-index="1" aria-label="Go to slide 2"></button>
+              <button class="carousel-dot" data-index="2" aria-label="Go to slide 3"></button>
+            </div>
+            <button class="carousel-button carousel-next" aria-label="Next slide">
+              <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L9 6L1 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="section-divider"></div>
+        <p class="case-study-text">When engineers began experimenting with using AI to implement some controls, I partnered closely with them to <span class="highlighted-text">figure out how to structure component design guidance in a way that the models could easily understand</span>.</p>
+        <p class="case-study-text">What we learned was that while the models generally understood discrete guidance, it had trouble making sense of separate pieces of documentation as a whole. We clarified this for the model by creating a <span class="highlighted-text">table of contents, with each section designated by the node id</span> in Figma. We also <span class="highlighted-text">removed noise in the Figma file</span> (ie., unnecessary frames that may have been helpful design scaffolding, but served as extraneous and confusing information for the AI).</p>
+        <div class="system-guidance-image-container">
+          <img src="Assets/Images/Project%201/agent-index.gif" alt="Agent index" class="system-guidance-image card-corner" />
+          <p class="image-caption body-2-light">We found that AI agents understood design documentation better when we pointed them to the node ids in Figma, which is the identifier for the specific frame in Figma.</p>
+        </div>
+      </section>
+      <hr class="divider">
+      <section id="system-guidance" class="case-study-section">
+        <h2 class="case-study-title title-1">2 / Create clearer, more comprehensive design system guidance</h2>
+        <p class="case-study-text">Designers and engineers across 35+ search segments were being asked to onboard to the latest visual design system for Bing, but much of the guidance was outdated, incomplete, and confusing - it needed a refresh.</p>
+        <p class="case-study-text"><span class="highlighted-text">I owned the visual refresh and maintenance of the Bing Design System.</span></p>
+        <div class="carousel-container">
+          <div class="component-carousel" id="systemGuidanceCarousel">
+            <div class="carousel-item-with-caption">
+              <img src="Assets/Images/Project%201/carousel-2-1.gif" alt="Carousel item 1" class="component-carousel-item" />
+              <p class="image-caption body-2-light">Bing is a complex product with a multitude of answer scenarios, so it was important to explain the evolution and state of the current design system, and how to get started when designing in Bing.</p>
+            </div>
+            <div class="carousel-item-with-caption">
+              <img src="Assets/Images/Project%201/carousel-2-3.gif" alt="Carousel item 2" class="component-carousel-item" />
+              <p class="image-caption body-2-light">An "answer card" is a basic bulding block of search query answers, but the previous guidance for building answer cards was complicated and didn't match how most designers used Figma intuitively. I created a simpler way for designers to use answer cards, so they could start designing and building concepts quickly.</p>
+            </div>
+            <div class="carousel-item-with-caption">
+              <img src="Assets/Images/Project%201/carousel-2-2.gif" alt="Carousel item 3" class="component-carousel-item" />
+              <p class="image-caption body-2-light">To help designers understand when and how to use components, I added best practices and explained each component property.</p>
+            </div>
+            <div class="carousel-item-with-caption">
+              <img src="Assets/Images/Project%201/carousel-2-4.png" alt="Carousel item 4" class="component-carousel-item" />
+              <p class="image-caption body-2-light">Because we were still building the design system, we needed to make it easy to understand which components were available for designers and devs.</p>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-button carousel-prev" aria-label="Previous slide">
+              <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 1L1 6L9 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="carousel-dots" id="systemGuidanceCarouselDots">
+              <button class="carousel-dot active" data-index="0" aria-label="Go to slide 1"></button>
+              <button class="carousel-dot" data-index="1" aria-label="Go to slide 2"></button>
+              <button class="carousel-dot" data-index="2" aria-label="Go to slide 3"></button>
+              <button class="carousel-dot" data-index="3" aria-label="Go to slide 4"></button>
+            </div>
+            <button class="carousel-button carousel-next" aria-label="Next slide">
+              <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L9 6L1 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <hr class="divider">
+      <section id="legacy-onboarding" class="case-study-section">
+        <h2 class="case-study-title title-1">3 / Design system review for Bing search engine design updates</h2>
+        <p class="case-study-text">Design coherence was a huge part of the day-to-day of the design systems team. We reviewed and provided feedback for design teams updating all of Bing to the latest design system. We needed to balance visual coherence with the unique needs of each search answer, and <span class="highlighted-text">ensure that teams could meet engagement metrics without depending on cluttered, attention-grabbing UI</span>.</p>
+        <div class="legacy-onboarding-image-container">
+          <img src="Assets/Images/Project%201/pre-acf-to-acf.png" alt="Pre ACF to ACF" class="legacy-onboarding-image card-corner" />
+          <p class="image-caption body-2-light">35+ search segment teams, each of which owns a number of search answer scenarios within Bing, updated their answers to align to modernized design guidelines. We consistently reviewed and provided feedback and signoff for 30+ designers.</p>
+        </div>
+      </section>
+      <hr class="divider">
+      <section id="semantic-tokens" class="case-study-section">
+        <h2 class="case-study-title title-1">4 / Transition to semantic tokens as a stepping stone towards alignment with Microsoft AI</h2>
+        <p class="case-study-text">Historically, Bing's design token naming was left intentionally non-prescriptive so that designers could use tokens flexibly and as needed for their use case. However, a strategic goal is to eventually align Bing with a new Microsoft AI design system. While monetization concerns meant that we would not do so for now, <span class="highlighted-text">we created 300+ semantic design tokens and onboarded all teams to them, so that when time came to transition to the Microsoft AI design system, we could simply 'flip the switch'.</span></p>
+        <div class="carousel-container">
+          <div class="component-carousel" id="semanticTokensCarousel">
+            <div class="carousel-item-with-caption">
+              <img src="Assets/Images/Project%201/project%201%20thumbnail-3.gif" alt="Carousel item 1" class="component-carousel-item" />
+              <p class="image-caption body-2-light">Semantic tokens enable the design sysem to scale. It makes it easier to evolve the visual system in the future without breaking things.</p>
+            </div>
+            <div class="carousel-item-with-caption">
+              <img src="Assets/Images/Project%201/carousel-3-2.gif" alt="Carousel item 2" class="component-carousel-item" />
+              <p class="image-caption body-2-light">Transitioning from non-semantic to semantic tokens meant that for each non-semantic token that existed, we needed to audit its usage and create a semantic token for each of its discrete use cases.</p>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-button carousel-prev" aria-label="Previous slide">
+              <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 1L1 6L9 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="carousel-dots" id="semanticTokensCarouselDots">
+              <button class="carousel-dot active" data-index="0" aria-label="Go to slide 1"></button>
+              <button class="carousel-dot" data-index="1" aria-label="Go to slide 2"></button>
+            </div>
+            <button class="carousel-button carousel-next" aria-label="Next slide">
+              <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L9 6L1 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <hr class="divider">
+      <section id="outcomes" class="case-study-section">
+        <h2 class="case-study-title title-1">Outcomes</h2>
+        <div class="outcomes-grid">
+          <div class="outcome-card">
+            <h3 class="outcome-title">A clearer, unified HIG</h3>
+            <p class="outcome-text">Designers across Bing felt more confident in using the design system and were able to design more quickly after we updated the HIG. We saw a clear drop in basic design-system questions, which allowed us to focus on supporting more nuanced, complex design questions.</p>
+          </div>
+          <div class="outcome-card">
+            <h3 class="outcome-title">60+ design components</h3>
+            <p class="outcome-text">The team is continuously vetting the need for new patterns and components to enable teams across Bing to design in a unified, scalable way.</p>
+          </div>
+          <div class="outcome-card">
+            <h3 class="outcome-title">20+ coded components</h3>
+            <p class="outcome-text">And counting. The team is also continuously improving the workflow fo AI-assisted component creation, enabling them to build faster.</p>
+          </div>
+          <div class="outcome-card">
+            <h3 class="outcome-title">Semantic tokens as a foundation for visual evolution</h3>
+            <p class="outcome-text">Now that all of Bing uses semantic tokens, Bing can experiment quickly with broad visual updates by changing token values, rather than going through an impossibly manual process.</p>
+          </div>
+        </div>
+      </section>
+      <div class="next-project-container">
+        <a class="next-project-link body-2" href="projects.html">Next project<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-arrow">
+<path d="M0.5 4.50001C0.223858 4.50001 -1.20706e-08 4.72386 0 5.00001C1.20706e-08 5.27615 0.223858 5.50001 0.5 5.50001L10.197 5.5L6.16552 9.12836C5.96026 9.31309 5.94362 9.62923 6.12835 9.83449C6.31308 10.0397 6.62923 10.0564 6.83448 9.87165L11.8345 5.37165C11.9398 5.27683 12 5.14175 12 5C12 4.85826 11.9398 4.72318 11.8345 4.62836L6.83448 0.128357C6.62923 -0.0563721 6.31308 -0.0397334 6.12835 0.165522C5.94362 0.370777 5.96026 0.686922 6.16552 0.871651L10.197 4.5L0.5 4.50001Z" fill="white" fill-opacity="0.4"/>
+</svg></a>
+      </div>
     </main>
   </div>
+  <script>
+    const navLinks = document.querySelectorAll('.project-nav a[href^="#"]');
+    
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Remove active class from all links
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+          });
+          
+          // Add active class to the matching link
+          const activeLink = document.querySelector(`.project-nav a[href="#${entry.target.id}"]`);
+          if (activeLink) {
+            activeLink.classList.add('active');
+          }
+        }
+      });
+    }, { threshold: 0.3 });
+
+    // Observe all elements with IDs
+    document.querySelectorAll('[id]').forEach(section => {
+      observer.observe(section);
+    });
+
+    // Password protection for project-1
+    const correctPassword = 'enterasrecruiter';
+    const passwordScreen = document.getElementById('password-screen');
+    const passwordInput = document.getElementById('password-input');
+    const passwordSubmit = document.getElementById('password-submit');
+    const passwordError = document.getElementById('password-error');
+
+    function handlePasswordSubmit() {
+      const enteredPassword = passwordInput.value;
+      if (enteredPassword === correctPassword) {
+        passwordScreen.classList.add('hidden');
+        sessionStorage.setItem('project1Unlocked', 'true');
+      } else {
+        passwordError.textContent = 'Incorrect password. Try again.';
+        passwordInput.value = '';
+      }
+    }
+
+    // Check if already unlocked in this session
+    if (sessionStorage.getItem('project1Unlocked') === 'true') {
+      passwordScreen.classList.add('hidden');
+    }
+
+    passwordSubmit.addEventListener('click', handlePasswordSubmit);
+    passwordInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        handlePasswordSubmit();
+      }
+    });
+
+    // Carousel controls
+    const carousel = document.getElementById('componentCarousel');
+    const carouselDots = document.querySelectorAll('.carousel-dot');
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
+    const itemWidth = 700; // width of carousel item
+    const itemWithGap = itemWidth + 24; // width + gap
+
+    function updateDots() {
+      const scrollLeft = carousel.scrollLeft;
+      const currentIndex = Math.round(scrollLeft / itemWithGap);
+      carouselDots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    }
+
+    prevButton.addEventListener('click', () => {
+      carousel.scrollBy({ left: -itemWithGap, behavior: 'smooth' });
+      setTimeout(updateDots, 300);
+    });
+
+    nextButton.addEventListener('click', () => {
+      carousel.scrollBy({ left: itemWithGap, behavior: 'smooth' });
+      setTimeout(updateDots, 300);
+    });
+
+    carouselDots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const index = parseInt(dot.dataset.index);
+        carousel.scrollTo({ left: index * itemWithGap, behavior: 'smooth' });
+        setTimeout(updateDots, 300);
+      });
+    });
+
+    carousel.addEventListener('scroll', updateDots);
+
+    // System guidance carousel controls
+    const systemGuidanceCarousel = document.getElementById('systemGuidanceCarousel');
+    const systemGuidanceCarouselDots = document.querySelectorAll('#systemGuidanceCarouselDots .carousel-dot');
+    const systemGuidancePrevButton = document.querySelector('#system-guidance .carousel-prev');
+    const systemGuidanceNextButton = document.querySelector('#system-guidance .carousel-next');
+
+    function updateSystemGuidanceDots() {
+      const scrollLeft = systemGuidanceCarousel.scrollLeft;
+      const currentIndex = Math.round(scrollLeft / itemWithGap);
+      systemGuidanceCarouselDots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    }
+
+    systemGuidancePrevButton.addEventListener('click', () => {
+      systemGuidanceCarousel.scrollBy({ left: -itemWithGap, behavior: 'smooth' });
+      setTimeout(updateSystemGuidanceDots, 300);
+    });
+
+    systemGuidanceNextButton.addEventListener('click', () => {
+      systemGuidanceCarousel.scrollBy({ left: itemWithGap, behavior: 'smooth' });
+      setTimeout(updateSystemGuidanceDots, 300);
+    });
+
+    systemGuidanceCarouselDots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const index = parseInt(dot.dataset.index);
+        systemGuidanceCarousel.scrollTo({ left: index * itemWithGap, behavior: 'smooth' });
+        setTimeout(updateSystemGuidanceDots, 300);
+      });
+    });
+
+    systemGuidanceCarousel.addEventListener('scroll', updateSystemGuidanceDots);
+
+    // Semantic tokens carousel controls
+    const semanticTokensCarousel = document.getElementById('semanticTokensCarousel');
+    const semanticTokensCarouselDots = document.querySelectorAll('#semanticTokensCarouselDots .carousel-dot');
+    const semanticTokensPrevButton = document.querySelector('#semantic-tokens .carousel-prev');
+    const semanticTokensNextButton = document.querySelector('#semantic-tokens .carousel-next');
+
+    function updateSemanticTokensDots() {
+      const scrollLeft = semanticTokensCarousel.scrollLeft;
+      const currentIndex = Math.round(scrollLeft / itemWithGap);
+      semanticTokensCarouselDots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    }
+
+    semanticTokensPrevButton.addEventListener('click', () => {
+      semanticTokensCarousel.scrollBy({ left: -itemWithGap, behavior: 'smooth' });
+      setTimeout(updateSemanticTokensDots, 300);
+    });
+
+    semanticTokensNextButton.addEventListener('click', () => {
+      semanticTokensCarousel.scrollBy({ left: itemWithGap, behavior: 'smooth' });
+      setTimeout(updateSemanticTokensDots, 300);
+    });
+
+    semanticTokensCarouselDots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const index = parseInt(dot.dataset.index);
+        semanticTokensCarousel.scrollTo({ left: index * itemWithGap, behavior: 'smooth' });
+        setTimeout(updateSemanticTokensDots, 300);
+      });
+    });
+
+    semanticTokensCarousel.addEventListener('scroll', updateSemanticTokensDots);
+  </script>
 </body>
 </html>

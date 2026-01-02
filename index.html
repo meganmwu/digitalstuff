@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Megan — Portfolio</title>
+	<link rel="stylesheet" href="tokens.css" />
+	<link rel="stylesheet" href="layout.css" />
+	<link rel="stylesheet" href="typography.css" />
+	<link rel="stylesheet" href="utilities.css" />
+	<link rel="stylesheet" href="components.css" />
+	<link rel="stylesheet" href="style.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="homepage">
+	<nav class="side-nav" aria-label="Main navigation">
+		<a class="side-link body-2 active" href="index.html">Megan Wu</a>
+		<a class="side-link body-2" href="projects.html">Work</a>
+		<a class="side-link body-2" href="about.html">About</a>
+		<a class="side-link body-2" href="fun.html">Fun</a>
+	</nav>
+	<div class="loading">
+	  <img src="Assets/Images/flower.png" alt="Spinning Flower" class="flower">
+	  <div class="text-center mt-xl">
+		<p class="foreground-content-neutral-primary body-1-strong">LOADING ...</p>	  
+	  </div> 
+	</div>
+	<div class="page-container homepage">
+		<main class="content">
+			<p class="intro centered body-1">Product designer making digital experiences easier and funner to use,<br>
+				currently designing at Microsoft AI.</p>
+			<div class="work-section centered" aria-label="Work list">
+			  <div class="project-line body-1">Work</div>
+			  <a class="project-line body-1" href="project-1.html">1 / <span class="body-1">Bing Design System: ensuring modernization and scalability</span></a>
+			  <a class="project-line body-1" href="#">2 / <span class="body-1">Copilot Places</span></a>
+			  <a class="project-line body-1" href="#">3 / <span class="body-1">Bing Places for Business</span></a>
+			  <a class="project-line body-1" href="#">4 / <span class="body-1">Alliance Bernstein Customer Experience Redesign</span></a>
+			</div>
+		</main>
+	</div>
+	<script>
+	  setTimeout(() => {
+	    document.querySelector('.loading').style.display = 'none';
+	  }, 1);
+	</script>
+</body>
+</html>

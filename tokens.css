@@ -1,0 +1,63 @@
+:root {
+  /* page background colors */
+    --white-1: #F3F3F3;
+    --black-1: #171717;
+  /* Colors */
+    --pink-1: #FFA5A5;
+  /* Greys */
+    --grey-100: rgb(0, 0, 0);
+    --grey-80: rgba(0, 0, 0, 0.8);
+    --grey-75: rgba(0, 0, 0, 0.75);
+    --grey-60: rgba(0, 0, 0, 0.6);
+    --grey-10: rgba(0, 0, 0, 0.1);
+    --card-background-primary: #D8D8D8;
+  /* Greys */
+    --white-100: rgb(255, 255, 255);
+    --white-80: rgba(255, 255, 255, 0.8);
+    --white-75: rgba(255, 255, 255, 0.75);
+    --white-60: rgba(255, 255, 255, 0.6);
+    --white-50: rgba(255, 255, 255, 0.5);
+    --white-40: rgba(255, 255, 255, 0.4);
+    --white-10: rgba(255, 255, 255, 0.1);
+    --white-15: rgba(255, 255, 255, 0.15);
+  /* numbers */
+    --number-4: 4px;
+    --number-8: 8px;
+    --number-12: 12px;
+    --number-16: 16px;
+    --number-24: 24px;
+    --number-32: 32px;
+    --number-48: 48px;
+    --number-100: 100px;
+    --number-160: 160px;
+  /* spacing */
+    --space-xxs: var(--number-4);
+    --space-xs:  var(--number-8);
+    --space-sm:  var(--number-12);
+    --space-md:  var(--number-16);
+    --space-lg:  var(--number-24);
+    --space-xl:  var(--number-32);
+    --space-2xl: var(--number-48);
+    --space-3xl: var(--number-100);
+    --space-4xl: var(--number-160);
+  /* spacing - delete eventually */
+    --body-top-padding: 100px;
+    --page-container-top-padding: 160px;
+  /* Semantic variables colors */
+    --page-background-light: var(--white-1);
+    --page-background-dark: var(--black-1);
+    --foreground-content-primary: var(--grey-100);
+    --foreground-content-secondary: var(--grey-80);
+    --foreground-content-tertiary: var(--grey-75);
+    --foreground-content-quaternary: var(--grey-60);
+    --stroke-default: var(--grey-10);
+    --card-bg: var(--card-background-primary);
+  /* On dark background variants */
+    --foreground-content-primary-on-dark: var(--white-100);
+    --foreground-content-secondary-on-dark: var(--white-80);
+    --foreground-content-tertiary-on-dark: var(--white-60);
+    --foreground-content-quaternary-on-dark: var(--white-40);
+    --stroke-default-on-dark: var(--white-10);
+  /* Highlighted text */
+    --highlighted-text-on-dark: var(--pink-1);
+}
