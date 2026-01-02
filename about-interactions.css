@@ -1,0 +1,100 @@
+
+/* About Page Layout & Interactions */
+
+/* Main content section with flexbox for layout */
+.about .content-section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 180px;
+  margin-right: 180px;
+}
+
+/* Top section styling */
+.about-layout {
+  width: 100%;
+  margin-bottom: 80px; /* Space between top section and sticky title */
+}
+
+/* Sticky title behavior */
+.coworkers-section {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--white-1); /* Match page background to prevent show-through */
+  padding-top: 16px;
+  padding-bottom: 16px;
+  z-index: 10; /* Ensure it stays above other content */
+  
+  /* When sticky element would overlap content above, this becomes static */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style the title to be interactive */
+.coworkers-title {
+  margin: 0;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.coworkers-title:hover {
+  opacity: 0.7;
+}
+
+/* Style the testimonials container */
+.testimonials-container {
+  margin: 0 auto;
+  transform: translateX(-90px); /* Match the offset of other sections */
+  max-width: 900px;
+  width: 100%;
+  padding-bottom: 100px; /* Add bottom spacing */
+}
+
+/* Adjust for mobile where nav layout changes */
+@media (max-width: 752px) {
+  .about .content-section {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .about-layout {
+    margin-bottom: 48px;
+    transform: none;
+    margin: 0;
+    max-width: none;
+    gap: 48px;
+  }
+
+  .about-bio-second {
+    margin-bottom: 48px;
+  }
+
+  .experience-table {
+    margin-bottom: 48px;
+  }
+
+  .contact-links {
+    margin-bottom: 48px;
+  }
+
+  .coworkers-section {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 48px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .testimonials-container {
+    transform: none; /* Remove offset on mobile */
+    margin: 0;
+    max-width: none;
+    width: 100%;
+    padding-bottom: 48px;
+    gap: 0px;
+  }
+}
