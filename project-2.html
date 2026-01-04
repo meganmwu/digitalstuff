@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Two — Portfolio</title>
+  <link rel="stylesheet" href="tokens.css" />
+  <link rel="stylesheet" href="layout.css" />
+  <link rel="stylesheet" href="typography.css" />
+  <link rel="stylesheet" href="utilities.css" />
+  <link rel="stylesheet" href="components.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="page-background-dark">
+  <div id="password-screen" class="password-screen">
+    <div class="password-container">
+      <h2 class="subtitle">Enter Password</h2>
+      <input type="password" id="password-input" class="password-input" placeholder="Password" />
+      <button id="password-submit" class="password-submit">Submit</button>
+      <p id="password-error" class="password-error"></p>
+    </div>
+  </div>
+
+  <nav class="project-nav" aria-label="Project navigation">
+    <a class="project-nav-link body-2" href="#" onclick="history.back(); return false;"><svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-arrow">
+<path d="M11.5 5.5C11.7761 5.5 12 5.27614 12 5C12 4.72386 11.7761 4.5 11.5 4.5L1.80298 4.5L5.83448 0.871651C6.03974 0.686921 6.05638 0.370777 5.87165 0.165522C5.68692 -0.039733 5.37077 -0.0563723 5.16552 0.128357L0.165518 4.62835C0.0601606 4.72317 6.19579e-09 4.85826 0 5C-6.19579e-09 5.14174 0.0601606 5.27683 0.165518 5.37165L5.16552 9.87164C5.37077 10.0564 5.68692 10.0397 5.87165 9.83448C6.05638 9.62922 6.03974 9.31308 5.83448 9.12835L1.80298 5.5L11.5 5.5Z" fill="white" fill-opacity="0.75"/>
+</svg>Back</a>
+    <a class="project-nav-link body-2" href="#overview">Overview</a>
+    <a class="project-nav-link body-2" href="#problem">Context</a>
+    <a class="project-nav-link body-2" href="#opportunity-1">Opportunity #1</a>
+    <a class="project-nav-link body-2" href="#opportunity-2">Opportunity #2</a>
+    <a class="project-nav-link body-2" href="#outcomes">Outcomes</a>
+  </nav>
+  <div class="work-projects-responsive">
+    <main class="project-content">
+      <section id="overview" class="overview-section">
+        <div class="overview-grid">
+          <div class="overview-column primary">
+            <div class="primary-content-section">
+              <h1 class="title-1" style="color: var(--foreground-content-primary-on-dark); margin-bottom: 36px;">How can we improve the current Copilot Local Answer?</h1>
+              <p class="body-1-light">I partnered with a product manager at Microsoft to explore concepts for an improved answer in Microsoft Copilot.</p>
+            </div>
+            <div class="primary-content-section">
+              <img src="Assets/Images/Project%202/thumbnail.png" alt="Project 2 hero" class="card-corner" style="width: 100%; height: 400px; object-fit: cover; display: block;" />
+            </div>
+          </div>
+          <div class="overview-column secondary">
+            <div class="about-project">
+              <h3 class="body-1-strong">Project type</h3>
+              <p class="body-2-light">Conceptual explorations</p>
+            </div>
+            <div class="about-project">
+              <h3 class="body-1-strong">Skills</h3>
+              <p class="body-2-light">Design explorations, prototyping, research application</p>
+            </div>
+            <div class="about-project">
+              <h3 class="body-1-strong">Team</h3>
+              <p class="body-2-light">1 product manager, 1 designer</p>
+            </div>
+            <div class="about-project">
+              <h3 class="body-1-strong">Role</h3>
+              <p class="body-2-light">Product Designer</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="divider">
+      <section id="problem" class="case-study-section">
+        <p class="section-tag" style="color: var(--foreground-content-primary-on-dark); margin-bottom: 48px;">Context</p>
+        <h2 class="case-study-title title-1">When you ask Copilot for "restaurants near me", it returns a simple answer.</h2>
+        <div class="problem-image-container">
+          <img src="Assets/Images/Project%202/current-answer.gif" alt="Current Copilot answer" style="width: 100%; border-radius: var(--number-4); margin-bottom: 48px; display: block;" />
+        </div>
+        <p class="case-study-text" style="color: var(--foreground-content-primary-on-dark);">The current "Copilot Local Answer" <span style="color: var(--highlighted-text-on-dark);">displays limited information and doesn't allow users to dive deeper into their options.</span> Based on past research research, these are core parts of a local search journey, so we needed to design a way for users to do this within Copilot.</p>
+      </section>
+      <hr class="divider">
+      <section id="opportunity-1" class="case-study-section">
+        <p class="section-tag" style="color: var(--foreground-content-primary-on-dark); margin-bottom: 48px;">Opportunity #1</p>
+        <h2 class="case-study-title title-1">Make it easier for users to compare their options</h2>
+        
+        <p class="section-tag" style="color: var(--foreground-content-primary-on-dark); margin-top: 48px; margin-bottom: 24px;">Observations</p>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 48px;">
+          <p class="case-study-text" style="color: var(--foreground-content-primary-on-dark);">Local queries like "restaurants near me" signal comparison mode.</p>
+          <p class="case-study-text" style="color: var(--foreground-content-primary-on-dark);">Users want quick ways to understand differences between options.</p>
+          <p class="case-study-text" style="color: var(--foreground-content-primary-on-dark);">Copilot users expect AI to interpret, not just list information.</p>
+        </div>
+        
+        <p class="section-tag" style="color: var(--foreground-content-primary-on-dark); margin-bottom: 24px;">Insight</p>
+        <p class="case-study-text" style="color: var(--foreground-content-primary-on-dark);">If AI can distill signals from across the web into clear, trustworthy highlights, users will gain a deeper understanding of each option with less effort.</p>
+        
+        <div style="margin-top: 48px;">
+          <img src="Assets/Images/Project%202/comparison-view.gif" alt="Opportunity 1 concept" style="width: 100%; aspect-ratio: 1.43 / 1; object-fit: cover; border-radius: var(--number-4); display: block;" />
+          <p class="image-caption body-2-light" style="margin-top: 12px;">This layout prioritized a default comparison view, surfacing basic details alongside AI‑generated highlights to help users quickly evaluate their options. For users who prefer spatial exploration, it also offered a map view as an alternative entry point.</p>
+        </div>
+      </section>
+      <hr class="divider">
+      <section id="opportunity-2" class="case-study-section">
+        <p class="section-tag" style="color: var(--foreground-content-primary-on-dark); margin-bottom: 48px;">Opportunity #2</p>
+        <h2 class="case-study-title title-1">Enable Users to Dive Deeper</h2>
+        
+        <p class="section-tag" style="color: var(--foreground-content-primary-on-dark); margin-top: 48px; margin-bottom: 24px;">Observations</p>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 48px;">
+          <p class="case-study-text" style="color: var(--foreground-content-primary-on-dark);">Prior research on Local decision journeys showed that once users begin narrowing down their choices, they need access to richer, entity-level details to feel confident.</p>
+          <p class="case-study-text" style="color: var(--foreground-content-primary-on-dark);">The most commonly referenced information included: ratings and reviews, photos, price ranges, hours of operation, and menus (for restaurants)</p>
+          <p class="case-study-text" style="color: var(--foreground-content-primary-on-dark);">In the current design, users could see only high-level summaries. There was no clear path to dive deeper into individual entities, which created friction at a critical decision point.</p>
+        </div>
+        
+        <p class="section-tag" style="color: var(--foreground-content-primary-on-dark); margin-bottom: 24px;">Insight</p>
+        <p class="case-study-text" style="color: var(--foreground-content-primary-on-dark);">Users need a structured, lightweight way to access deeper details without losing their place in the broader results.</p>
+        
+        <div>
+          <div style="margin-top: 80px; margin-bottom: 48px;">
+            <p class="section-tag" style="color: var(--foreground-content-primary-on-dark); margin-bottom: 12px;">Exploration 1</p>
+            <p class="body-1" style="color: var(--foreground-content-primary-on-dark); margin-bottom: 24px;">Chat-first disclosure</p>
+            <img src="Assets/Images/Project%202/more-details-via-chat.gif" alt="Exploration 1" style="width: 100%; aspect-ratio: 1.43 / 1; object-fit: cover; border-radius: var(--number-4); display: block;" />
+            <p class="image-caption body-2-light" style="margin-top: 12px;">This approach assumed that the most natural pattern for Copilot is to keep all interactions within the chat paradigm. Instead of relying on clickable UI to reveal more information, users would simply ask Copilot for deeper details, and the chatbot would surface them directly in the thread. We leaned toward this option because it stayed truest to the core expectations and mental model of a chat-based experience.</p>
+          </div>
+          
+          <div style="margin-top: 80px; margin-bottom: 48px;">
+            <p class="section-tag" style="color: var(--foreground-content-primary-on-dark); margin-bottom: 12px;">Exploration 2</p>
+            <p class="body-1" style="color: var(--foreground-content-primary-on-dark); margin-bottom: 24px;">In‑context details panel</p>
+            <img src="Assets/Images/Project%202/details-panel.gif" alt="Exploration 2" style="width: 100%; aspect-ratio: 1.43 / 1; object-fit: cover; border-radius: var(--number-4); display: block;" />
+            <p class="image-caption body-2-light" style="margin-top: 12px;">This approach displayed detailed entity information in a right‑hand details panel, allowing users to remain in the familiar chat surface while viewing additional information in a fixed, dismissible space. The goal was to support deeper exploration without disrupting the flow of the conversation.</p>
+          </div>
+          
+          <div style="margin-top: 80px;">
+            <p class="section-tag" style="color: var(--foreground-content-primary-on-dark); margin-bottom: 12px;">Exploration 3</p>
+            <p class="body-1" style="color: var(--foreground-content-primary-on-dark); margin-bottom: 24px;">L2 details page</p>
+            <img src="Assets/Images/Project%202/l2-details-page.gif" alt="Exploration 3" style="width: 100%; aspect-ratio: 1.43 / 1; object-fit: cover; border-radius: var(--number-4); display: block;" />
+            <p class="image-caption body-2-light" style="margin-top: 12px;">This approach surfaced richer entity information on a dedicated L2 page, where users could continue chatting with Copilot to ask follow‑up questions. However, we questioned whether introducing an L2 pattern aligned with Copilot's core interaction model. Because users are accustomed to staying within a single conversational surface, adding a secondary page risked feeling heavy‑handed and potentially out of character for a chat‑first experience.</p>
+          </div>
+        </div>
+      </section>
+      <hr class="divider">
+      <section id="outcomes" class="case-study-section">
+        <h2 class="case-study-title title-1">Outcomes</h2>
+        <p class="case-study-text" style="color: var(--foreground-content-primary-on-dark); margin-bottom: 48px; max-width: none;">Although the initiative was paused before moving beyond MVP, the V2 explorations created meaningful impact across the Copilot product ecosystem.</p>
+        <div class="outcomes-grid">
+          <div class="outcome-card">
+            <h3 class="outcome-title">Influenced adjacent teams</h3>
+            <p class="outcome-text">Several of the patterns I developed independently aligned with explorations happening in other product segments. These patterns were later adopted, contributing to a more unified and scalable design direction.</p>
+          </div>
+          <div class="outcome-card">
+            <h3 class="outcome-title">Clarified the long-term vision</h3>
+            <p class="outcome-text">The work established a clear north star for how the experience could evolve, helping the team articulate what a more extensible and user-centered version of the feature could look like.</p>
+          </div>
+          <div class="outcome-card">
+            <h3 class="outcome-title">De-risked future decisions</h3>
+            <p class="outcome-text">By exploring multiple paths early, the work surfaced usability, technical, and architectural considerations that will inform future iterations once the project resumes.</p>
+          </div>
+        </div>
+      </section>
+      <div class="next-project-container">
+        <a class="next-project-link body-2" href="project-3.html">Next project<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-arrow">
+<path d="M0.5 4.50001C0.223858 4.50001 -1.20706e-08 4.72386 0 5.00001C1.20706e-08 5.27615 0.223858 5.50001 0.5 5.50001L10.197 5.5L6.16552 9.12836C5.96026 9.31309 5.94362 9.62923 6.12835 9.83449C6.31308 10.0397 6.62923 10.0564 6.83448 9.87165L11.8345 5.37165C11.9398 5.27683 12 5.14175 12 5C12 4.85826 11.9398 4.72318 11.8345 4.62836L6.83448 0.128357C6.62923 -0.0563721 6.31308 -0.0397334 6.12835 0.165522C5.94362 0.370777 5.96026 0.686922 6.16552 0.871651L10.197 4.5L0.5 4.50001Z" fill="white" fill-opacity="0.4"/>
+</svg></a>
+      </div>
+    </main>
+  </div>
+  <script>
+    const navLinks = document.querySelectorAll('.project-nav a[href^="#"]');
+    
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Remove active class from all links
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+          });
+          
+          // Add active class to the matching link
+          const activeLink = document.querySelector(`.project-nav a[href="#${entry.target.id}"]`);
+          if (activeLink) {
+            activeLink.classList.add('active');
+          }
+        }
+      });
+    }, { threshold: 0.3 });
+
+    // Observe all elements with IDs
+    document.querySelectorAll('[id]').forEach(section => {
+      observer.observe(section);
+    });
+
+    // Password protection for project-2
+    const correctPassword = 'enterasrecruiter';
+    const passwordScreen = document.getElementById('password-screen');
+    const passwordInput = document.getElementById('password-input');
+    const passwordSubmit = document.getElementById('password-submit');
+    const passwordError = document.getElementById('password-error');
+
+    function handlePasswordSubmit() {
+      const enteredPassword = passwordInput.value;
+      if (enteredPassword === correctPassword) {
+        passwordScreen.classList.add('hidden');
+        sessionStorage.setItem('project2Unlocked', 'true');
+      } else {
+        passwordError.textContent = 'Incorrect password. Try again.';
+        passwordInput.value = '';
+      }
+    }
+
+    // Check if already unlocked in this session
+    if (sessionStorage.getItem('project2Unlocked') === 'true') {
+      passwordScreen.classList.add('hidden');
+    }
+
+    passwordSubmit.addEventListener('click', handlePasswordSubmit);
+    passwordInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        handlePasswordSubmit();
+      }
+    });
+  </script>
+</body>
+</html>
